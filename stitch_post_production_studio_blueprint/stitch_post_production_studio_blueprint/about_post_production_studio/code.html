@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;600&amp;family=Geist:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#251a00",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary": "#3c2f00",
+                    "error": "#ffb4ab",
+                    "surface-container-low": "#1c1b1b",
+                    "background": "#131313",
+                    "on-primary-fixed": "#001f25",
+                    "on-primary": "#00363f",
+                    "outline-variant": "#3b494c",
+                    "surface": "#131313",
+                    "on-secondary-fixed": "#241a00",
+                    "primary-fixed": "#a5eeff",
+                    "on-tertiary": "#3f2e00",
+                    "surface-container": "#201f1f",
+                    "on-primary-container": "#005f6d",
+                    "secondary": "#e9c349",
+                    "tertiary-fixed-dim": "#f7be27",
+                    "outline": "#859397",
+                    "on-tertiary-fixed-variant": "#5b4300",
+                    "tertiary-container": "#fec42e",
+                    "surface-dim": "#131313",
+                    "primary-fixed-dim": "#00daf8",
+                    "on-surface": "#e5e2e1",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-surface-variant": "#bac9cd",
+                    "tertiary": "#ffe6b6",
+                    "error-container": "#93000a",
+                    "inverse-on-surface": "#313030",
+                    "secondary-fixed": "#ffe088",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-tint": "#00daf8",
+                    "surface-variant": "#353534",
+                    "surface-container-highest": "#353534",
+                    "on-background": "#e5e2e1",
+                    "primary": "#baf2ff",
+                    "primary-container": "#00e0ff",
+                    "inverse-surface": "#e5e2e1",
+                    "tertiary-fixed": "#ffdf9d",
+                    "inverse-primary": "#006877",
+                    "secondary-container": "#af8d11",
+                    "on-secondary-container": "#342800",
+                    "surface-bright": "#3a3939",
+                    "on-primary-fixed-variant": "#004e5a",
+                    "on-secondary-fixed-variant": "#574500",
+                    "on-error": "#690005",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-tertiary-container": "#6f5200"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "80px",
+                    "section-gap": "160px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Montserrat"],
+                    "label-caps": ["Geist"],
+                    "headline-lg": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Montserrat"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #131313; color: #e5e2e1; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-background border-b border-surface-variant h-20">
+<div class="flex justify-between items-center w-full px-margin-desktop h-full">
+<div class="font-headline-md text-headline-md font-extrabold tracking-tighter text-on-surface">STUDIO_POST</div>
+<nav class="hidden md:flex gap-8">
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-caps text-label-caps uppercase text-primary border-b-2 border-primary pb-1" href="#">About</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Services</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Portfolio</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<button class="bg-primary text-on-primary-fixed font-label-caps text-label-caps uppercase px-6 py-3 transition-all duration-300 hover:bg-primary-container active:scale-95">Get a Quote</button>
+</div>
+</header>
+<main>
+<!-- Hero: Studio Intro -->
+<section class="px-margin-desktop pt-24 pb-section-gap max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8">
+<span class="font-label-caps text-label-caps text-primary uppercase mb-4 block tracking-widest">About the Studio</span>
+<h1 class="font-display-lg text-display-lg mb-8 leading-tight">Mastering the Art of <span class="text-primary-container">Cinematic Precision.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed max-w-2xl">
+                        At STUDIO_POST, we don't just edit footage; we sculpt experiences. Based at the intersection of technology and artistry, our studio serves as a sanctuary for cinematic excellence. From high-octane VFX to the nuanced tonal shifts of elite color grading, we bring a technical rigor that transforms raw visual data into unforgettable stories.
+                    </p>
+</div>
+<div class="md:col-span-4 flex items-end justify-end">
+<div class="w-full h-80 border border-outline-variant relative overflow-hidden">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A professional cinematic color grading suite in a dark room with minimal ambient lighting. The workspace features three high-end 4K monitors displaying vibrant film footage, a professional Blackmagic DaVinci Resolve control panel, and charcoal acoustic panels. The aesthetic is ultra-modern, dark, and technical, with a focus on precision and high-contrast visuals." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCa3rO_XJJ71ScQCvtJvBMFtLmTEopc4rMATMCyD_BFb4epL4TrH--3Xz71oSO82p87Zf7vP9EVljSeLxfpPaXoo66fzsvnb7zjqiAWk7zeGRnQNKJInCXwM6qppxmY2fKzKqmpsmf7ymztAvWuDODW26mwEW67QkZlJNDeTzHUF-AQZ-PYd8Y67f7FM2CwjOy8gDZvMLlkgrnjok1VdRpxG6Z2bwWLr6AtjJ1jlQX1d58EFl88uHbI8mj9DHMCa_wacC3hevNIsnKT"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="bg-surface-container-lowest py-24 border-y border-surface-variant">
+<div class="px-margin-desktop max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter text-center">
+<div class="group">
+<div class="font-display-lg text-display-lg text-on-surface group-hover:text-primary transition-colors duration-300">10+</div>
+<div class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-[0.2em]">Years of Craft Excellence</div>
+</div>
+<div class="group">
+<div class="font-display-lg text-display-lg text-on-surface group-hover:text-primary transition-colors duration-300">500+</div>
+<div class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-[0.2em]">Global Projects Delivered</div>
+</div>
+</div>
+</section>
+<!-- Mission Statement -->
+<section class="px-margin-desktop py-section-gap max-w-7xl mx-auto text-center">
+<div class="inline-block p-1 border border-primary mb-12">
+<div class="border border-primary px-4 py-1 font-label-caps text-label-caps uppercase text-primary">Mission</div>
+</div>
+<h2 class="font-display-lg text-display-lg text-on-surface max-w-5xl mx-auto leading-none uppercase italic">
+                The UI disappears to let the <span class="text-primary-container">artistry</span> of the image take center stage.
+            </h2>
+</section>
+<!-- Expertise & Software -->
+<section class="px-margin-desktop py-section-gap bg-surface-container-low border-y border-surface-variant">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<h3 class="font-headline-lg text-headline-lg mb-2">Technical Arsenal</h3>
+<div class="h-1 w-20 bg-primary"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div class="p-10 border border-outline-variant flex flex-col items-center justify-center gap-6 group hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-5xl text-on-surface-variant group-hover:text-primary transition-colors">adb</span>
+<div class="font-label-caps text-label-caps uppercase">Adobe Creative Cloud</div>
+</div>
+<div class="p-10 border border-outline-variant flex flex-col items-center justify-center gap-6 group hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-5xl text-on-surface-variant group-hover:text-primary transition-colors">deployed_code</span>
+<div class="font-label-caps text-label-caps uppercase">DaVinci Resolve</div>
+</div>
+<div class="p-10 border border-outline-variant flex flex-col items-center justify-center gap-6 group hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-5xl text-on-surface-variant group-hover:text-primary transition-colors">3d_rotation</span>
+<div class="font-label-caps text-label-caps uppercase">Cinema 4D</div>
+</div>
+<div class="p-10 border border-outline-variant flex flex-col items-center justify-center gap-6 group hover:bg-surface-container-high transition-all">
+<span class="material-symbols-outlined text-5xl text-on-surface-variant group-hover:text-primary transition-colors">shapes</span>
+<div class="font-label-caps text-label-caps uppercase">Blender 3D</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Behind-the-Scenes (Bento Style Gallery) -->
+<section class="px-margin-desktop py-section-gap max-w-7xl mx-auto">
+<div class="mb-16 flex justify-between items-end">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase mb-2 block">Our Workspace</span>
+<h2 class="font-headline-lg text-headline-lg">Behind the Craft</h2>
+</div>
+<div class="hidden md:block font-body-md text-body-md text-on-surface-variant max-w-sm text-right">
+                    Observation of our daily workflow, where high-end hardware meets creative intuition.
+                </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px]">
+<div class="md:col-span-2 md:row-span-2 border border-outline-variant overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A wide-angle cinematic shot of a modern post-production studio workspace at night. Large windows show a dark city skyline. Inside, several workstations are equipped with high-end calibrated monitors, ergonomic chairs, and subtle blue and cyan accent lighting. The mood is sophisticated, quiet, and focused, emphasizing a premium dark-minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrRz3eT3HUYU-9mQaGOr8ddNc6vOKaTJ-Dl72W_wQME7XX-4bD0IKCWbAG_2QAapEf49_HFXuNH7KS-SoklJLLtowtrzoPVQQSaRWKSdTLdsf16hvnUISOR2rHvSKHHbcrd_E4Lqye8XVWHs6er8y0mfueJCU-f16_27mmAbWugUMqY2-CWHqcSVTHMa9LlnXKgbp6jrcL_ojCAI8V2liGWps2u0q1PfPMLSnTew-ZUocAvx9LR3Sz1G9PBisHQ3T8T6VX91GI0Ay6"/>
+</div>
+<div class="border border-outline-variant overflow-hidden group">
+<img class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105" data-alt="Close-up of a high-end video editing console with backlit keys in electric cyan. A hand is adjusting a precision jog wheel on a DaVinci Resolve control surface. The lighting is very moody and focused, highlighting the metallic textures and professional equipment in a dark post-production environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz9mSkixD8r5jnvkikq4GAYaKCwBV6pNegDA2T3CzkwYCKBJv16gR_zgASPCY8zsWR3JCdwWXhW5nBViNvyKg_uzo1JUIkzMfBJqAqBy6SrYIX9PKCmnMS79TzYR1AXzNGIHYXctLRDqvhAkXetYeCaJ1F27FF6j8nJCcMk-T0jBmfTzMuSJwRQATtxxJi3SiG6SwG_E63xAftIndNjoKC36Iwq6tF_bJ97IRDpv-TCEDRu7_nDvC6Y-6IsQCyuo8dc2lm0hmdgKXd"/>
+</div>
+<div class="border border-outline-variant overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Macro shot of server rack lights in a dark data center room. Rows of blinking cyan and white LEDs reflect off polished black surfaces, signifying the high-performance computing power used for rendering complex VFX. The image is crisp, high-contrast, and technical in style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4yXdqgdLdwpZK0DosILFfuDMDiRtUEr5KMz_qcCDWHNEUR3D_IS2slrQMXqMzpb4fJPjkcVR8WQibtzYrg51jS5c4Uh7r8vAx4b09AJvBsvx2wNbns98Xk3j222n-rLTDyy2OkolqVNH05RjfVcJC441TcJbhLTF5lyEjU6dJaEljMAy0TI5fssNnU6iCyogkvGKbMVdl6uhyuyEciQzU4Ng6mZCjsjmU6PzUMqYhSGTWW629rM3FprHEAvcayJj8UgYU-oJ7nGdO"/>
+</div>
+<div class="md:col-span-3 border border-outline-variant overflow-hidden group h-[400px]">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A cinematic interior of a professional screening room. A large projection screen shows a vivid, high-contrast film scene. Rows of luxury black leather seating are arranged in a dark room with minimal floor lighting. The atmosphere is exclusive and high-end, reflecting the premium nature of a cinematic post-production house." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbRIxcyUhqzSeCMRmJt4ILP3Zo8REjZlDM8nU31k4FK-QVC8FkzTkzGA9OTlJbaL0oPQIj0iqmX8gmYrsUY_VmCx_zSOYuMOEOv5vT6f9Fn-_9Z5Y2Z3Q_8UW6MytQip2rpJ5ZYnG479PvdvguzbD59AXxH4tPJj0Ukjr3vAQRIgr-AJvDMowBKmQI9fqGuNQjP09NE_OICCibgf2X33NrYF7ceHtxb5D-QMqiM3MlYt01hS-R5C4cZybwFMEcYTqd5NZsb9qtidKa"/>
+</div>
+</div>
+</section>
+<!-- Final CTA / Footer Teaser -->
+<section class="bg-primary text-on-primary-fixed-variant py-24">
+<div class="px-margin-desktop max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-gutter">
+<h2 class="font-display-lg-mobile md:text-display-lg font-display-lg uppercase leading-none italic">Let's create <br/> greatness.</h2>
+<a class="inline-flex items-center gap-4 px-12 py-6 border-2 border-on-primary-fixed-variant font-label-caps text-label-caps uppercase hover:bg-on-primary-fixed-variant hover:text-primary transition-all group" href="#">
+                    Start a Project
+                    <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background border-t border-surface-variant py-section-gap">
+<div class="max-w-7xl mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="md:col-span-1">
+<div class="font-headline-md text-headline-md font-extrabold text-on-surface mb-6">STUDIO_POST</div>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 STUDIO_POST. ALL RIGHTS RESERVED.</p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps uppercase text-primary mb-6">Services</h4>
+<ul class="flex flex-col gap-3">
+<li><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors" href="#">VFX</a></li>
+<li><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors" href="#">Color Grading</a></li>
+<li><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors" href="#">Sound Design</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps uppercase text-primary mb-6">Studio</h4>
+<ul class="flex flex-col gap-3">
+<li><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors" href="#">Editorial</a></li>
+<li><a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps uppercase text-primary mb-6">Newsletter</h4>
+<div class="flex border-b border-outline-variant pb-2">
+<input class="bg-transparent border-none focus:ring-0 font-label-caps text-label-caps w-full text-on-surface uppercase" placeholder="EMAIL ADDRESS" type="email"/>
+<button class="material-symbols-outlined text-primary">chevron_right</button>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

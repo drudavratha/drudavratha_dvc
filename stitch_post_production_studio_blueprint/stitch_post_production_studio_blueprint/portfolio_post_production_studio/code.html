@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;family=Geist:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#251a00",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary": "#3c2f00",
+                    "error": "#ffb4ab",
+                    "surface-container-low": "#1c1b1b",
+                    "background": "#131313",
+                    "on-primary-fixed": "#001f25",
+                    "on-primary": "#00363f",
+                    "outline-variant": "#3b494c",
+                    "surface": "#131313",
+                    "on-secondary-fixed": "#241a00",
+                    "primary-fixed": "#a5eeff",
+                    "on-tertiary": "#3f2e00",
+                    "surface-container": "#201f1f",
+                    "on-primary-container": "#005f6d",
+                    "secondary": "#e9c349",
+                    "tertiary-fixed-dim": "#f7be27",
+                    "outline": "#859397",
+                    "on-tertiary-fixed-variant": "#5b4300",
+                    "tertiary-container": "#fec42e",
+                    "surface-dim": "#131313",
+                    "primary-fixed-dim": "#00daf8",
+                    "on-surface": "#e5e2e1",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-surface-variant": "#bac9cd",
+                    "tertiary": "#ffe6b6",
+                    "error-container": "#93000a",
+                    "inverse-on-surface": "#313030",
+                    "secondary-fixed": "#ffe088",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-tint": "#00daf8",
+                    "surface-variant": "#353534",
+                    "surface-container-highest": "#353534",
+                    "on-background": "#e5e2e1",
+                    "primary": "#baf2ff",
+                    "primary-container": "#00e0ff",
+                    "inverse-surface": "#e5e2e1",
+                    "tertiary-fixed": "#ffdf9d",
+                    "inverse-primary": "#006877",
+                    "secondary-container": "#af8d11",
+                    "on-secondary-container": "#342800",
+                    "surface-bright": "#3a3939",
+                    "on-primary-fixed-variant": "#004e5a",
+                    "on-secondary-fixed-variant": "#574500",
+                    "on-error": "#690005",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-tertiary-container": "#6f5200"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "80px",
+                    "section-gap": "160px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Montserrat"],
+                    "label-caps": ["Geist"],
+                    "headline-lg": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Montserrat"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+        }
+        .project-card:hover .project-overlay {
+            opacity: 1;
+            backdrop-filter: blur(20px);
+        }
+        .project-card:hover img {
+            scale: 1.05;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased">
+<!-- Top Navigation -->
+<nav class="sticky top-0 w-full z-50 bg-background dark:bg-background border-b border-surface-variant h-20 flex justify-between items-center px-margin-desktop">
+<div class="font-headline-md text-headline-md font-extrabold tracking-tighter text-on-surface dark:text-on-surface">
+            STUDIO_POST
+        </div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Services</a>
+<a class="font-label-caps text-label-caps uppercase text-primary border-b-2 border-primary pb-1" href="#">Portfolio</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary-fixed-variant px-6 py-3 font-label-caps text-label-caps uppercase hover:bg-primary-container transition-all active:scale-95 duration-200">
+            Get a Quote
+        </button>
+</nav>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<header class="pt-section-gap px-margin-desktop max-w-7xl mx-auto mb-20">
+<h1 class="font-display-lg text-display-lg uppercase mb-8">Selected<br/>Works</h1>
+<p class="font-body-lg text-body-lg max-w-2xl text-on-surface-variant">
+                Cinematic excellence for global brands. We bridge the gap between technical precision and creative storytelling.
+            </p>
+</header>
+<!-- Filter Bar -->
+<section class="px-margin-desktop mb-gutter max-w-7xl mx-auto">
+<div class="flex flex-wrap items-center gap-4 border-b border-surface-variant pb-8">
+<button class="font-label-caps text-label-caps px-4 py-2 bg-primary text-on-primary-fixed-variant">ALL</button>
+<button class="font-label-caps text-label-caps px-4 py-2 text-on-surface-variant hover:text-primary transition-colors">2D DESIGN</button>
+<button class="font-label-caps text-label-caps px-4 py-2 text-on-surface-variant hover:text-primary transition-colors">3D VISUALIZATION</button>
+<button class="font-label-caps text-label-caps px-4 py-2 text-on-surface-variant hover:text-primary transition-colors">VIDEO</button>
+<button class="font-label-caps text-label-caps px-4 py-2 text-on-surface-variant hover:text-primary transition-colors">MOTION GRAPHICS</button>
+<button class="font-label-caps text-label-caps px-4 py-2 text-on-surface-variant hover:text-primary transition-colors">PHOTOGRAPHY</button>
+</div>
+</section>
+<!-- Project Grid -->
+<section class="px-margin-desktop pb-section-gap max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter">
+<!-- Project 1: Real Estate Visualization (Large) -->
+<div class="lg:col-span-8 group relative overflow-hidden project-card bg-surface-container-lowest border border-surface-variant">
+<img class="w-full h-[600px] object-cover transition-transform duration-700 ease-out" data-alt="A high-end architectural visualization of a modern luxury villa at twilight. The structure features expansive glass walls and clean geometric lines, illuminated by warm internal lighting that contrasts against a deep blue dusk sky. The aesthetic is ultra-minimalist and premium, with sharp reflections on a calm infinity pool in the foreground. The color palette is dominated by obsidian blacks and cool grays with amber highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDDcQA8J1_DhqPRPSY9IAEEkKJ7JFEAF1l_h2fyCVkmlXcGoOhUnYJj-DNRV08BVNL2k77RR1BM-LJIc5xeCMA6swdXp0cJ-BNzBYfoHLgatiUH0Ed7WTDb1yok8lMif4CTn_1GkGJOFIASBS7aU7LMkL4ax-w1IxtbL97awGz6cIApifrVYkO-cfReSOaEFc5J8n4gLod0chJnp12baD2AI8tHsmzHxTDm3aPkGZYTnfvLdeQVwwRZD-Fp91eKURZ-T59rIo9FRlY"/>
+<div class="project-overlay absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-margin-desktop">
+<div class="space-y-4">
+<span class="font-label-caps text-label-caps px-3 py-1 bg-primary text-on-primary-fixed-variant inline-block">3D VISUALIZATION</span>
+<h3 class="font-headline-lg text-headline-lg">REAL ESTATE VISUALIZATION</h3>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="font-label-caps text-label-caps">UNREAL ENGINE 5</span>
+<span class="w-1 h-1 bg-on-surface-variant rounded-full"></span>
+<span class="font-label-caps text-label-caps">LUMION</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 2: Brand Promo Edit -->
+<div class="lg:col-span-4 group relative overflow-hidden project-card bg-surface-container-lowest border border-surface-variant">
+<img class="w-full h-[600px] object-cover transition-transform duration-700 ease-out" data-alt="A cinematic close-up of a high-performance luxury automobile detail, focusing on the sleek metal curves and an glowing LED light strip. The environment is a dark, atmospheric studio with dramatic rim lighting and heavy shadows. The visual style is crisp and technical, emphasizing premium craft and speed. Intense cyan and white highlights cut through the deep black background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5mUVyjETUKMQp5t4936jiwrQGuIrBtLKsPKbT6qqPmQS44ybhWevNrGS-3_uGRf6se4JZRcVLEEIxdH60e_aqKnefYlSL9oFw7K_-J5-1GuWd5NnLfYmPBv5C2akhyaDHPmZ5cO7Cm3qIkX841Nf0SqdAm0L7BYIeohSf5-Zcc9boRVAueKd_W9BagDdYNkjZ0Z77zauH9X6I6l4FV38urDKJr0BH1WAu3n4xbsq4pRfXJ-5jpYzSMw-OmptDMMSMNPu75I01HNeF"/>
+<div class="project-overlay absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-10">
+<div class="space-y-4">
+<span class="font-label-caps text-label-caps px-3 py-1 bg-primary text-on-primary-fixed-variant inline-block">VIDEO</span>
+<h3 class="font-headline-md text-headline-md">BRAND PROMO EDIT</h3>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="font-label-caps text-label-caps">PREMIERE PRO</span>
+<span class="w-1 h-1 bg-on-surface-variant rounded-full"></span>
+<span class="font-label-caps text-label-caps">DAVINCI RESOLVE</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 3: Product Animation -->
+<div class="lg:col-span-4 group relative overflow-hidden project-card bg-surface-container-lowest border border-surface-variant">
+<img class="w-full h-[500px] object-cover transition-transform duration-700 ease-out" data-alt="A macro shot of a futuristic minimalist wristwatch floating in a void. The watch features mechanical inner gears rendered in high detail with metallic textures. The lighting is cold and clinical, highlighting the precision engineering. The aesthetic is dark and sophisticated, with sharp contrasts between chrome surfaces and the pitch-black environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBenHIKnLIjq-RYtDzT_mIiBrZG6HXD7LVX9Rd0b3pUh5EUPhTKM0DZDRdNUbji_CetwEnI8zqZyL3Sjh4atzN2Y4kMInQpkF8eei_9WJsribBrtP6c5Qz2dhzYBnScqlF8kT2M-O0vwQhUc3kvFrJ9ZoT5ZtH2gyAaoGZsMFqtaSyjpEeafp9LqluNskwkJQ3zXPdinmh4LSf09EPRRJixHXdyoOtpX5itmtmOPyY8CdeB0lbWJDM4avEcuVAf5At3yupFI5AO5aoH"/>
+<div class="project-overlay absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-10">
+<div class="space-y-4">
+<span class="font-label-caps text-label-caps px-3 py-1 bg-primary text-on-primary-fixed-variant inline-block">MOTION GRAPHICS</span>
+<h3 class="font-headline-md text-headline-md">PRODUCT ANIMATION</h3>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="font-label-caps text-label-caps">CINEMA 4D</span>
+<span class="w-1 h-1 bg-on-surface-variant rounded-full"></span>
+<span class="font-label-caps text-label-caps">OCTANE</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 4: Cinematic VFX -->
+<div class="lg:col-span-8 group relative overflow-hidden project-card bg-surface-container-lowest border border-surface-variant">
+<img class="w-full h-[500px] object-cover transition-transform duration-700 ease-out" data-alt="An abstract cinematic visual showing liquid obsidian swirling with glowing cyan energetic particles. The composition is dynamic and high-contrast, representing a digital VFX explosion or simulation. The lighting is dramatic, with neon cyan glows casting reflections on the fluid dark surfaces. The atmosphere is mysterious and technologically advanced, following a noir-precision style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK2hvxZvqiLDWXHrH3Rj1dmeNDifXnQTGpwyj3ftlUDPmilcwArbixXNaMTLzdp3vVF36soZAgfB-G-tMEm2tp1HgcI8DmkijCogI5zOSjc_UeBTygCs0LI-QDu7j_LLSqv4Qr8uGQAC4bv5OEnt7HMTXLgpKiN37nzS1VOqBsBmxkp0D7xmMk1VbWtK_vtFPUkNDDkpoklIwBdix4K3U-egQiXK-AL2wH3sJea_Wd-x5VkyHtZ19nv7BclVSjUD2F0eouDS9WoVz7"/>
+<div class="project-overlay absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-margin-desktop">
+<div class="space-y-4">
+<span class="font-label-caps text-label-caps px-3 py-1 bg-primary text-on-primary-fixed-variant inline-block">VFX</span>
+<h3 class="font-headline-lg text-headline-lg">CYBERNETIC SEQUENCE</h3>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="font-label-caps text-label-caps">HOUDINI</span>
+<span class="w-1 h-1 bg-on-surface-variant rounded-full"></span>
+<span class="font-label-caps text-label-caps">NUKE</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 5: Photography Series -->
+<div class="lg:col-span-6 group relative overflow-hidden project-card bg-surface-container-lowest border border-surface-variant">
+<img class="w-full h-[450px] object-cover transition-transform duration-700 ease-out" data-alt="A high-contrast black and white architectural photograph of a brutalist concrete building. Sharp shadows create bold geometric patterns across the textured walls. The sky is a flat, deep gray, and the overall mood is austere and authoritative. The composition focuses on the rhythm of vertical pillars and the precision of the concrete finish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK8lJnT-ymNhuQgte8FQMLlmQxtlilvdIgJEhx8iXjLpjIYuv_Y1kOzM4ZPXPyYR9EeD3LCb796xi9F6CUwEvbUqQ_d8p3JD7yEWjy7q7Ry46cLLI-sNJJtCkL2SZzLWbA6MGer2rsEZdRNBstf-idrII-as-T0c3PHEgAyfJkSLacuBuKz1SOiAlwWsEA5zic2-uiDBRsMSAiXHVJc_Ud9naTCiRucwK_3kwLE6YzYVOkcdKFd5gUOFwv9SUoK_HxsSix-1MgrwOG"/>
+<div class="project-overlay absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-10">
+<div class="space-y-4">
+<span class="font-label-caps text-label-caps px-3 py-1 bg-primary text-on-primary-fixed-variant inline-block">PHOTOGRAPHY</span>
+<h3 class="font-headline-md text-headline-md">URBAN BRUTALISM</h3>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="font-label-caps text-label-caps">SONY A7RIV</span>
+<span class="w-1 h-1 bg-on-surface-variant rounded-full"></span>
+<span class="font-label-caps text-label-caps">LIGHTROOM</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 6: Editorial Design -->
+<div class="lg:col-span-6 group relative overflow-hidden project-card bg-surface-container-lowest border border-surface-variant">
+<img class="w-full h-[450px] object-cover transition-transform duration-700 ease-out" data-alt="A minimalist layout of a luxury brand book spread across a dark table. The typography is clean, using a bold sans-serif font against ample white space. The lighting is soft and directional, creating a premium editorial feel. The overall aesthetic is highly sophisticated, focusing on the precision of layout and the quality of print materials." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGxI5fiacMRH3ixrkbFyxPcCnxC9fsL6TGqzgEPF4YmqKMHH_eCJhlnqePkcaGznt53bbIUbiKh__3bty0KIIHMHCn1Zfjpk4LZvB-s7Bsf3vhde4azz4YiyVOiJkE3sYMkTnpFCKfKLcstrFU0V9f8NKT4_ZxAj6OdiTviw8129yKtw8ni9jduBuCZpMo229s7jQLKRhmvgpiWF5TQfqeFg3YRRk-QBB_n90yRtBWsKjMNsvBkUXxWMK1TUFBhhHx33PS-hF096bj"/>
+<div class="project-overlay absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300 flex flex-col justify-end p-10">
+<div class="space-y-4">
+<span class="font-label-caps text-label-caps px-3 py-1 bg-primary text-on-primary-fixed-variant inline-block">2D DESIGN</span>
+<h3 class="font-headline-md text-headline-md">REEL COVER DESIGN</h3>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="font-label-caps text-label-caps">PHOTOSHOP</span>
+<span class="w-1 h-1 bg-on-surface-variant rounded-full"></span>
+<span class="font-label-caps text-label-caps">ILLUSTRATOR</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-surface-container-low border-t border-surface-variant py-section-gap px-margin-desktop text-center">
+<h2 class="font-display-lg text-display-lg uppercase mb-8">Start Your Project</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto mb-12">
+                We are currently accepting new commissions for Q4 2024. Let's build something exceptional together.
+            </p>
+<div class="flex flex-col md:flex-row justify-center gap-gutter">
+<button class="bg-primary text-on-primary-fixed-variant px-12 py-5 font-label-caps text-label-caps uppercase hover:bg-primary-container transition-all">Get in Touch</button>
+<button class="border border-on-surface text-on-surface px-12 py-5 font-label-caps text-label-caps uppercase hover:bg-on-surface hover:text-background transition-all">View Our Reels</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background dark:bg-background border-t border-surface-variant py-section-gap">
+<div class="max-w-7xl mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="space-y-8">
+<div class="font-headline-md text-headline-md font-extrabold text-on-surface dark:text-on-surface">STUDIO_POST</div>
+<p class="text-on-surface-variant font-body-md text-body-md pr-10">Premium post-production boutique specializing in cinematic visual arts and high-end commercial finishes.</p>
+</div>
+<div class="space-y-6">
+<div class="font-label-caps text-label-caps uppercase text-primary">SERVICES</div>
+<ul class="space-y-4 font-label-caps text-label-caps uppercase text-on-surface-variant">
+<li><a class="hover:text-on-surface transition-colors" href="#">VFX</a></li>
+<li><a class="hover:text-on-surface transition-colors" href="#">Color Grading</a></li>
+<li><a class="hover:text-on-surface transition-colors" href="#">Sound Design</a></li>
+<li><a class="hover:text-on-surface transition-colors" href="#">Editorial</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<div class="font-label-caps text-label-caps uppercase text-primary">SOCIAL</div>
+<ul class="space-y-4 font-label-caps text-label-caps uppercase text-on-surface-variant">
+<li><a class="hover:text-on-surface transition-colors" href="#">Vimeo</a></li>
+<li><a class="hover:text-on-surface transition-colors" href="#">Behance</a></li>
+<li><a class="hover:text-on-surface transition-colors" href="#">Instagram</a></li>
+<li><a class="hover:text-on-surface transition-colors" href="#">LinkedIn</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<div class="font-label-caps text-label-caps uppercase text-primary">CONTACT</div>
+<p class="text-on-surface-variant">HELLO@STUDIOPOST.COM</p>
+<p class="text-on-surface-variant">LONDON / NEW YORK</p>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-margin-desktop mt-section-gap pt-8 border-t border-surface-variant flex justify-between items-center">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant opacity-50">© 2024 STUDIO_POST. ALL RIGHTS RESERVED.</span>
+<div class="flex gap-8">
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors" href="#">Privacy</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface transition-colors" href="#">Terms</a>
+</div>
+</div>
+</footer>
+</body></html>

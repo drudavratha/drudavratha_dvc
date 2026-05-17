@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Geist:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#251a00",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary": "#3c2f00",
+                    "error": "#ffb4ab",
+                    "surface-container-low": "#1c1b1b",
+                    "background": "#131313",
+                    "on-primary-fixed": "#001f25",
+                    "on-primary": "#00363f",
+                    "outline-variant": "#3b494c",
+                    "surface": "#131313",
+                    "on-secondary-fixed": "#241a00",
+                    "primary-fixed": "#a5eeff",
+                    "on-tertiary": "#3f2e00",
+                    "surface-container": "#201f1f",
+                    "on-primary-container": "#005f6d",
+                    "secondary": "#e9c349",
+                    "tertiary-fixed-dim": "#f7be27",
+                    "outline": "#859397",
+                    "on-tertiary-fixed-variant": "#5b4300",
+                    "tertiary-container": "#fec42e",
+                    "surface-dim": "#131313",
+                    "primary-fixed-dim": "#00daf8",
+                    "on-surface": "#e5e2e1",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-surface-variant": "#bac9cd",
+                    "tertiary": "#ffe6b6",
+                    "error-container": "#93000a",
+                    "inverse-on-surface": "#313030",
+                    "secondary-fixed": "#ffe088",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-tint": "#00daf8",
+                    "surface-variant": "#353534",
+                    "surface-container-highest": "#353534",
+                    "on-background": "#e5e2e1",
+                    "primary": "#baf2ff",
+                    "primary-container": "#00e0ff",
+                    "inverse-surface": "#e5e2e1",
+                    "tertiary-fixed": "#ffdf9d",
+                    "inverse-primary": "#006877",
+                    "secondary-container": "#af8d11",
+                    "on-secondary-container": "#342800",
+                    "surface-bright": "#3a3939",
+                    "on-primary-fixed-variant": "#004e5a",
+                    "on-secondary-fixed-variant": "#574500",
+                    "on-error": "#690005",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-tertiary-container": "#6f5200"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "80px",
+                    "section-gap": "160px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Montserrat"],
+                    "label-caps": ["Geist"],
+                    "headline-lg": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Montserrat"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #131313; }
+        ::-webkit-scrollbar-thumb { background: #353534; }
+        ::-webkit-scrollbar-thumb:hover { background: #00daf8; }
+        .grid-lines {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, #1a1a1a 1px, transparent 1px), linear-gradient(to bottom, #1a1a1a 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-fixed-variant overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-background dark:bg-background border-b border-surface-variant h-20 flex justify-between items-center px-margin-desktop">
+<div class="font-headline-md text-headline-md font-extrabold tracking-tighter text-on-surface">STUDIO_POST</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Services</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Portfolio</a>
+<a class="font-label-caps text-label-caps uppercase text-primary border-b-2 border-primary pb-1" href="#">Contact</a>
+</div>
+<button class="font-label-caps text-label-caps uppercase bg-primary text-on-primary-fixed-variant px-6 py-3 hover:bg-primary-container transition-all duration-300 active:scale-95">
+            Get a Quote
+        </button>
+</nav>
+<main class="grid-lines min-h-screen">
+<!-- Header Section -->
+<section class="px-margin-desktop py-section-gap flex flex-col items-center text-center">
+<div class="max-w-4xl">
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-[0.3em] mb-6 block">Inquiry / Collab</span>
+<h1 class="font-display-lg text-display-lg font-extrabold tracking-tighter text-on-surface mb-8">
+                    Let's bring your vision to life.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    From raw dailies to the final cinema-ready master. We specialize in high-end VFX, color grading, and technical precision for world-class storytellers.
+                </p>
+</div>
+</section>
+<!-- Contact & Form Grid -->
+<section class="px-margin-desktop pb-section-gap">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Direct Contact Info -->
+<div class="lg:col-span-5 space-y-gutter">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-gutter">
+<!-- Email Card -->
+<div class="p-8 border border-surface-variant bg-surface-container-lowest hover:bg-surface-container-low transition-all group">
+<span class="material-symbols-outlined text-primary mb-4" style="font-variation-settings: 'opsz' 40;">mail</span>
+<h3 class="font-label-caps text-label-caps uppercase text-on-surface mb-2">Technical Inquiry</h3>
+<p class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">hello@studio-post.com</p>
+</div>
+<!-- WhatsApp Card -->
+<div class="p-8 border border-surface-variant bg-surface-container-lowest hover:bg-surface-container-low transition-all group">
+<span class="material-symbols-outlined text-primary mb-4">chat_bubble</span>
+<h3 class="font-label-caps text-label-caps uppercase text-on-surface mb-2">Direct Message</h3>
+<p class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">+1 (555) 902-8841</p>
+</div>
+<!-- Instagram Card -->
+<div class="p-8 border border-surface-variant bg-surface-container-lowest hover:bg-surface-container-low transition-all group">
+<span class="material-symbols-outlined text-primary mb-4">movie_edit</span>
+<h3 class="font-label-caps text-label-caps uppercase text-on-surface mb-2">Instagram</h3>
+<p class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">@studiopost_vfx</p>
+</div>
+<!-- Calendly / Booking -->
+<div class="p-8 border border-primary bg-surface-container-lowest hover:bg-primary hover:text-on-primary-fixed-variant transition-all cursor-pointer group">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-label-caps text-label-caps uppercase mb-2">Book a Session</h3>
+<p class="font-body-md text-body-md opacity-80">Consultation with our Lead Colorist.</p>
+</div>
+<span class="material-symbols-outlined">calendar_today</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="lg:col-span-7 bg-surface-container-highest p-10 md:p-16">
+<form class="space-y-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="relative group">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant group-focus-within:text-primary transition-colors">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary text-on-surface font-body-md py-4 px-0 placeholder:text-surface-variant" placeholder="John Wick" type="text"/>
+</div>
+<div class="relative group">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant group-focus-within:text-primary transition-colors">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary text-on-surface font-body-md py-4 px-0 placeholder:text-surface-variant" placeholder="john@continental.com" type="email"/>
+</div>
+</div>
+<div class="relative group">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant group-focus-within:text-primary transition-colors">Project Type</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary text-on-surface font-body-md py-4 px-0 appearance-none">
+<option class="bg-surface-container-highest">Color Grading</option>
+<option class="bg-surface-container-highest">Visual Effects (VFX)</option>
+<option class="bg-surface-container-highest">Sound Design</option>
+<option class="bg-surface-container-highest">Full Post-Production Bundle</option>
+</select>
+</div>
+<div class="relative group">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant group-focus-within:text-primary transition-colors">Project Details</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary text-on-surface font-body-md py-4 px-0 placeholder:text-surface-variant resize-none" placeholder="Tell us about your technical specs and creative vision..." rows="4"></textarea>
+</div>
+<button class="w-full md:w-auto bg-primary text-on-primary-fixed-variant px-12 py-5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary-container transition-all active:scale-95 flex items-center justify-center gap-4" type="submit">
+                            Send Transmission
+                            <span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Location Section -->
+<section class="w-full">
+<div class="relative h-[600px] w-full overflow-hidden grayscale contrast-125">
+<!-- Overlay for aesthetic darkening -->
+<div class="absolute inset-0 bg-background/40 z-10 pointer-events-none"></div>
+<div class="absolute top-12 left-margin-desktop z-20 bg-surface-container-highest p-8 border border-surface-variant max-w-sm">
+<h4 class="font-label-caps text-label-caps uppercase text-primary mb-4 tracking-widest">Base Operations</h4>
+<p class="font-body-md text-body-md text-on-surface mb-2">Building 04, Arts District</p>
+<p class="font-body-md text-body-md text-on-surface-variant">721 S Santa Fe Ave, Los Angeles, CA 90021</p>
+<div class="mt-6 flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[18px]">near_me</span>
+<a class="font-label-caps text-[10px] uppercase underline tracking-widest" href="#">Get Directions</a>
+</div>
+</div>
+<!-- Map Placeholder -->
+<img class="w-full h-full object-cover" data-alt="A high-contrast, dark-themed satellite map of a minimalist urban district with glowing cyan navigation lines marking a specific studio location. The aesthetic is cinematic and high-tech, using deep charcoal tones and electric cyan accents to highlight the path. The lighting mimics a nighttime surveillance aesthetic with sharp clarity and technical precision." data-location="Los Angeles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3TlgqbzBuCWpv1VmWunVOYdv3wSsFYySx-Ld3g-e8ZQMjTOmjXc-S3Sx7tsLyqDqmsx70ATCnFsz66YuF5aGqY8vvOeDsk1d6WAbDDY7HdCoUBBAvB0-iB__cA8Y_Ib9LPiXEpfB6HHZnfQ3S4lD6VMM1jw4anfHDMrqgq40dshardBcKWFi1p62P4ym2f9hWuYrmS4iSydAksynSWp_QShkrYYXg7BIVmgRW2r7w03O0EtN7vcOlAUACGsjOs2MXaKC4asZJlrcX"/>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background dark:bg-background border-t border-surface-variant py-section-gap">
+<div class="max-w-7xl mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-2">
+<div class="font-headline-md text-headline-md font-extrabold text-on-surface mb-6">STUDIO_POST</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+                    Precision engineering for the silver screen. Dedicated to the craft of technical excellence in motion pictures.
+                </p>
+</div>
+<div class="space-y-4">
+<h5 class="font-label-caps text-label-caps uppercase text-primary mb-6">Expertise</h5>
+<ul class="space-y-3">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">VFX</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Color Grading</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Sound Design</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Editorial</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h5 class="font-label-caps text-label-caps uppercase text-primary mb-6">Studio</h5>
+<ul class="space-y-3">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Careers</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Journal</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-margin-desktop mt-16 pt-8 border-t border-surface-variant flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-caps text-label-caps uppercase text-on-surface-variant opacity-50">© 2024 STUDIO_POST. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-8">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Privacy Policy</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Terms of Service</span>
+</div>
+</div>
+</footer>
+</body></html>

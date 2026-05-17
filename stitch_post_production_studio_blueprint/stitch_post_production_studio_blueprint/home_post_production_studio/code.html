@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>STUDIO_POST | Cinematic Post Production</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Inter:wght@400;500&amp;family=Geist:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#251a00",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary": "#3c2f00",
+                    "error": "#ffb4ab",
+                    "surface-container-low": "#1c1b1b",
+                    "background": "#131313",
+                    "on-primary-fixed": "#001f25",
+                    "on-primary": "#00363f",
+                    "outline-variant": "#3b494c",
+                    "surface": "#131313",
+                    "on-secondary-fixed": "#241a00",
+                    "primary-fixed": "#a5eeff",
+                    "on-tertiary": "#3f2e00",
+                    "surface-container": "#201f1f",
+                    "on-primary-container": "#005f6d",
+                    "secondary": "#e9c349",
+                    "tertiary-fixed-dim": "#f7be27",
+                    "outline": "#859397",
+                    "on-tertiary-fixed-variant": "#5b4300",
+                    "tertiary-container": "#fec42e",
+                    "surface-dim": "#131313",
+                    "primary-fixed-dim": "#00daf8",
+                    "on-surface": "#e5e2e1",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-surface-variant": "#bac9cd",
+                    "tertiary": "#ffe6b6",
+                    "error-container": "#93000a",
+                    "inverse-on-surface": "#313030",
+                    "secondary-fixed": "#ffe088",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-tint": "#00daf8",
+                    "surface-variant": "#353534",
+                    "surface-container-highest": "#353534",
+                    "on-background": "#e5e2e1",
+                    "primary": "#baf2ff",
+                    "primary-container": "#00e0ff",
+                    "inverse-surface": "#e5e2e1",
+                    "tertiary-fixed": "#ffdf9d",
+                    "inverse-primary": "#006877",
+                    "secondary-container": "#af8d11",
+                    "on-secondary-container": "#342800",
+                    "surface-bright": "#3a3939",
+                    "on-primary-fixed-variant": "#004e5a",
+                    "on-secondary-fixed-variant": "#574500",
+                    "on-error": "#690005",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-tertiary-container": "#6f5200"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "80px",
+                    "section-gap": "160px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Montserrat"],
+                    "label-caps": ["Geist"],
+                    "headline-lg": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Montserrat"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+        }
+        .text-gradient-cyan {
+            background: linear-gradient(135deg, #baf2ff 0%, #00daf8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md bg-background selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-surface-variant h-20">
+<div class="flex justify-between items-center w-full px-margin-desktop h-full">
+<div class="font-headline-md text-headline-md font-extrabold tracking-tighter text-on-surface">STUDIO_POST</div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="font-label-caps text-label-caps uppercase text-primary border-b-2 border-primary pb-1" href="#">Home</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">About</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Services</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Portfolio</a>
+<a class="font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<button class="bg-primary text-on-primary-fixed-variant font-label-caps text-label-caps uppercase px-6 py-3 transition-all duration-300 hover:scale-95">Get a Quote</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-black/60 z-10"></div>
+<img class="w-full h-full object-cover grayscale opacity-50" data-alt="A cinematic, low-angle shot of a high-end film production monitor displaying a vibrant, high-contrast action scene. In the background, a dark, moody studio environment is visible with soft bokeh from professional lighting equipment. The atmosphere is professional and technically advanced, utilizing a palette of deep blacks and sharp cyan highlights that match a premium post-production aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaWzbB7axdTKQw2ul7Pat37wXe9U6p783U6qOTYKNawv4aS74-qVhomOsG-M4ruhwEeob_jzSeaZJoLQKvJoNmh8gLVXjztHVehfVr3W13ld025mSWUii9RTODO8zP_iqT9_uUo7q8okHPAEJbauu99-2Zj05iQBxapT7NqLTILnEUj6FqUoOrJK3ULM3gWEgBzt0VL420ZchIwweVUSDoQ5rPcmjKvw3vNfXot74tHVznkcIVTTL40wbFeM3TJoN6jxietxDwgr2O"/>
+</div>
+<div class="relative z-20 text-center max-w-4xl px-margin-mobile">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight">Cinematic Post Production &amp; Creative Visual Services</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 tracking-widest uppercase">2D Design • Video Editing • 3D Visualization • Motion Graphics • Photography</p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<button class="w-full md:w-auto bg-primary text-on-primary-fixed-variant px-12 py-5 font-label-caps text-label-caps uppercase hover:bg-primary-container transition-all">View Portfolio</button>
+<button class="w-full md:w-auto border border-on-surface text-on-surface px-12 py-5 font-label-caps text-label-caps uppercase hover:bg-on-surface hover:text-background transition-all">Get a Quote</button>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+<span class="material-symbols-outlined text-primary text-4xl">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- Clients Logo Grid -->
+<section class="py-16 bg-surface-container-lowest border-y border-surface-variant">
+<div class="px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-6 gap-gutter opacity-40 grayscale items-center">
+<div class="flex justify-center">
+<span class="font-headline-md text-headline-md font-bold tracking-tighter">PROJECT_A</span>
+</div>
+<div class="flex justify-center">
+<span class="font-headline-md text-headline-md font-bold tracking-tighter">MOTION_X</span>
+</div>
+<div class="flex justify-center">
+<span class="font-headline-md text-headline-md font-bold tracking-tighter">CYAN_MEDIA</span>
+</div>
+<div class="flex justify-center">
+<span class="font-headline-md text-headline-md font-bold tracking-tighter">FRAME_LAB</span>
+</div>
+<div class="flex justify-center">
+<span class="font-headline-md text-headline-md font-bold tracking-tighter">VFX_CORE</span>
+</div>
+<div class="flex justify-center">
+<span class="font-headline-md text-headline-md font-bold tracking-tighter">LENS_PRO</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap px-margin-desktop">
+<div class="mb-20">
+<h2 class="font-headline-lg text-headline-lg mb-4">Core Disciplines</h2>
+<div class="h-1 w-20 bg-primary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<!-- 2D Design -->
+<div class="group border border-outline-variant p-10 hover:bg-surface-container transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">layers</span>
+<h3 class="font-headline-md text-headline-md mb-4">2D Design</h3>
+<p class="text-on-surface-variant mb-6">Precision-driven graphic design and digital layouts crafted with technical excellence.</p>
+<span class="font-label-caps text-label-caps text-primary group-hover:underline">Explore Workflow</span>
+</div>
+<!-- Video Editing -->
+<div class="group border border-outline-variant p-10 hover:bg-surface-container transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">movie_edit</span>
+<h3 class="font-headline-md text-headline-md mb-4">Video Editing</h3>
+<p class="text-on-surface-variant mb-6">Cinematic narrative construction with focus on pacing, rhythm, and emotional impact.</p>
+<span class="font-label-caps text-label-caps text-primary group-hover:underline">Explore Workflow</span>
+</div>
+<!-- 3D Visualization -->
+<div class="group border border-outline-variant p-10 hover:bg-surface-container transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">view_in_ar</span>
+<h3 class="font-headline-md text-headline-md mb-4">3D Visualization</h3>
+<p class="text-on-surface-variant mb-6">Photorealistic environment and product rendering for immersive visual experiences.</p>
+<span class="font-label-caps text-label-caps text-primary group-hover:underline">Explore Workflow</span>
+</div>
+<!-- Motion Graphics -->
+<div class="group border border-outline-variant p-10 hover:bg-surface-container transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">motion_photos_on</span>
+<h3 class="font-headline-md text-headline-md mb-4">Motion Graphics</h3>
+<p class="text-on-surface-variant mb-6">Dynamic animation and title design that breathes life into static concepts.</p>
+<span class="font-label-caps text-label-caps text-primary group-hover:underline">Explore Workflow</span>
+</div>
+<!-- Photography -->
+<div class="group border border-outline-variant p-10 hover:bg-surface-container transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">photo_camera</span>
+<h3 class="font-headline-md text-headline-md mb-4">Photography</h3>
+<p class="text-on-surface-variant mb-6">High-end commercial photography with a focus on lighting and technical composition.</p>
+<span class="font-label-caps text-label-caps text-primary group-hover:underline">Explore Workflow</span>
+</div>
+<!-- Videography -->
+<div class="group border border-outline-variant p-10 hover:bg-surface-container transition-all duration-300">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">videocam</span>
+<h3 class="font-headline-md text-headline-md mb-4">Videography</h3>
+<p class="text-on-surface-variant mb-6">Professional on-site capture utilizing industry-standard cinema cameras and gear.</p>
+<span class="font-label-caps text-label-caps text-primary group-hover:underline">Explore Workflow</span>
+</div>
+</div>
+</section>
+<!-- Featured Projects -->
+<section class="py-section-gap bg-surface-container-lowest">
+<div class="px-margin-desktop mb-20 flex justify-between items-end">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-4">Featured Projects</h2>
+<p class="text-on-surface-variant">A curated selection of our most complex visual achievements.</p>
+</div>
+<button class="border-b border-primary text-primary font-label-caps text-label-caps pb-2">VIEW ALL WORKS</button>
+</div>
+<div class="px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Project 1 -->
+<div class="group relative overflow-hidden">
+<img class="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A dark and moody architectural visualization of a futuristic skyscraper surrounded by fog. The lighting is cold and atmospheric, with sharp cyan neon accents on the building edges. The image has a professional film-grain texture and high dynamic range, reflecting an elite 3D rendering and color grading capability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVZtoHG567ADY3HaKTzSgDBYaLimQE25tQboVrjRhRKP_wKmU6YULtFArmdw1KIYGSdjmBKYRjgR61Sj6W7W1unHSDCgVMgkp3YLGm0U56Sl-fa6aUessKkYEULp4ZWW5y_oYOqXa8sbjQKyw_fnQBKnczv3cBsLe7zGn3I7S1t-SqPwXFOtpXSZt56dl_mn0z5BjmrdiLk0oFdqwDKdsQHdCuyDF2Ds99OcK75eu-SrsfQK4E9C9KQ-VNR67tb_Lp8qu12xxIYofG"/>
+<div class="mt-6 flex justify-between items-start">
+<div>
+<h4 class="font-headline-md text-headline-md mb-2">NEON ARCHITECTURE</h4>
+<div class="flex gap-2">
+<span class="bg-surface-container-high px-3 py-1 text-label-caps font-label-caps uppercase text-primary">3D Rendering</span>
+<span class="bg-surface-container-high px-3 py-1 text-label-caps font-label-caps uppercase text-on-surface-variant border border-outline-variant">Unreal Engine</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_outward</span>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group relative overflow-hidden">
+<img class="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A sophisticated close-up of a digital motion graphics interface featuring floating 3D geometric fragments and particle effects. The lighting is vibrant yet controlled, emphasizing high-tech aesthetics with deep contrast and electric cyan glowing elements against a dark charcoal background. Cinematic quality with shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbVofxdu5hMZSXkEqUBi_fGa62JdlbwL6uHHY4DR_MKqgLVRTsSqUE9zbnzfy0ik41t1y5L587jdv0w2474wSlfPdk-xRRLvLeMqSV0_c1Sx1TIGkYO2eObMPuZ0bywDiIL6zNhJM_hn473Z11WBczRqwQcR58CzPRr4iUDuMDvguCzOfRRFE_3qh-Ucin3oMamifrThQzJoyJBZz-7MEkcWiO06C7Km5x4GmXjVDh_xJEcBI2KhrW816wSlisrMLD0Bu226L3rO_d"/>
+<div class="mt-6 flex justify-between items-start">
+<div>
+<h4 class="font-headline-md text-headline-md mb-2">DIGITAL FRAGMENTS</h4>
+<div class="flex gap-2">
+<span class="bg-surface-container-high px-3 py-1 text-label-caps font-label-caps uppercase text-primary">Motion Design</span>
+<span class="bg-surface-container-high px-3 py-1 text-label-caps font-label-caps uppercase text-on-surface-variant border border-outline-variant">After Effects</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_outward</span>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group relative overflow-hidden">
+<img class="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A highly stylized cinematic wide shot of a professional color grading suite. A master editor is working on a triple-monitor setup showing a high-contrast dramatic film scene. The room is dark, lit only by the glowing screens and a subtle cyan ambient back-light, representing the pinnacle of professional video editing and post-production quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJtbIB35ZfppIH_oh6a-qwCdDR7_QuAOKstb2GQkupSr1LY3uTidf3kbBr-pZOb4m5nsM6c9GDSF7kOeQF1Y75eOawuFzUOrJFqfsR8sO-qR65VBSM2-QyIoCxUL2Mu2r2Jjn_OOVVWOdlz7UAd7uD_5i9MotkqQ_Ia-ulEoiT-5sogSO3hVkfcIq64RYINCxj4xlRgRYHZFD58yPkdyL5K0gOSfuccMIZIoZfkgnuN7SDIX6krRD6bkP7-9emsJk8Jf-KjB3s3ndV"/>
+<div class="mt-6 flex justify-between items-start">
+<div>
+<h4 class="font-headline-md text-headline-md mb-2">CINEMATIC EDIT</h4>
+<div class="flex gap-2">
+<span class="bg-surface-container-high px-3 py-1 text-label-caps font-label-caps uppercase text-primary">VFX / Edit</span>
+<span class="bg-surface-container-high px-3 py-1 text-label-caps font-label-caps uppercase text-on-surface-variant border border-outline-variant">DaVinci Resolve</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_outward</span>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="group relative overflow-hidden">
+<img class="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A wide cinematic landscape of a futuristic desert city at twilight. The composition features sharp silhouettes of architectural structures against a deep purple and cyan sky. The image exhibits professional-grade photomanipulation and 2D design enhancements, showing complex lighting effects and digital matte painting techniques." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpbZGYdE0yoj8C5L_O0N-2oC8u8Pu_3RUUJq49LgBJQgmXuwfR5ElQgeA1CwrBCh71AtXsS74GcDcSGf2ZIABsJ4Xltd0fh0P8wFQeZ0FY6VDIheVblkntjneSTAKrSaPqp2g1GDhd6jYa0pB5IaLaUl8A_rpFcpYkxwY_89llbSCAa8JqnWp2Y8gahgeSRfpr0Anl4a8BJIwMFppbdAc9NRaH64Aj7oTdm-ZNVFoCcvLDdFtUP64122LlHqqtwulsRzSjRGVM6Uop"/>
+<div class="mt-6 flex justify-between items-start">
+<div>
+<h4 class="font-headline-md text-headline-md mb-2">TWILIGHT FRONTIER</h4>
+<div class="flex gap-2">
+<span class="bg-surface-container-high px-3 py-1 text-label-caps font-label-caps uppercase text-primary">2D Composite</span>
+<span class="bg-surface-container-high px-3 py-1 text-label-caps font-label-caps uppercase text-on-surface-variant border border-outline-variant">Photoshop</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">arrow_outward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us / Workflow Hybrid -->
+<section class="py-section-gap px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-section-gap">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-10">Engineering Excellence</h2>
+<div class="space-y-12">
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12 bg-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-fixed-variant" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-2">Fast Turnaround</h4>
+<p class="text-on-surface-variant">Our high-performance render farms and optimized workflows ensure deadlines are met without compromising technical fidelity.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12 bg-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-fixed-variant" style="font-variation-settings: 'FILL' 1;">settings_cinematic_blur</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-2">Standardized Pipeline</h4>
+<p class="text-on-surface-variant">We utilize a strictly monitored industry-standard pipeline from ingest to delivery, ensuring seamless collaboration.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<div class="w-12 h-12 bg-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-primary-fixed-variant" style="font-variation-settings: 'FILL' 1;">high_quality</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-2">Unrivaled Rendering</h4>
+<p class="text-on-surface-variant">Master-grade 8K export capabilities with deep color depth and lossless visual clarity for every project.</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-10">Our Workflow</h2>
+<div class="relative border-l border-outline-variant pl-10 space-y-16">
+<!-- Step 1 -->
+<div class="relative">
+<div class="absolute -left-[50px] top-1 w-5 h-5 bg-primary border-4 border-background rounded-full"></div>
+<span class="font-label-caps text-label-caps text-primary uppercase mb-2 block">Step 01</span>
+<h4 class="font-headline-md text-headline-md mb-2">Discovery</h4>
+<p class="text-on-surface-variant">Initial deep-dive into the creative vision, technical requirements, and target audience.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative">
+<div class="absolute -left-[50px] top-1 w-5 h-5 bg-outline-variant border-4 border-background rounded-full"></div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2 block">Step 02</span>
+<h4 class="font-headline-md text-headline-md mb-2">Planning</h4>
+<p class="text-on-surface-variant">Asset preparation, storyboarding, and technical architecture definition.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative">
+<div class="absolute -left-[50px] top-1 w-5 h-5 bg-outline-variant border-4 border-background rounded-full"></div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2 block">Step 03</span>
+<h4 class="font-headline-md text-headline-md mb-2">Production</h4>
+<h5 class="text-on-surface-variant mb-2">The execution phase: 3D modeling, editing, and visual construction.</h5>
+</div>
+<!-- Step 4 -->
+<div class="relative">
+<div class="absolute -left-[50px] top-1 w-5 h-5 bg-outline-variant border-4 border-background rounded-full"></div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2 block">Step 04</span>
+<h4 class="font-headline-md text-headline-md mb-2">Review</h4>
+<p class="text-on-surface-variant">Iterative feedback loops and precision adjustments based on director notes.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-section-gap px-margin-desktop bg-surface-container">
+<div class="text-center mb-20">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest">Client Voices</span>
+<h2 class="font-headline-lg text-headline-lg mt-4">Industry Consensus</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<div class="p-10 border border-outline-variant bg-background">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">format_quote</span>
+<p class="body-lg mb-10 italic">"STUDIO_POST transformed our raw footage into a cinematic masterpiece. Their technical precision is unmatched in the market."</p>
+<div>
+<p class="font-label-caps text-label-caps uppercase font-bold">Marcus Chen</p>
+<p class="text-label-caps text-on-surface-variant">Director, Horizon Films</p>
+</div>
+</div>
+<div class="p-10 border border-outline-variant bg-background">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">format_quote</span>
+<p class="body-lg mb-10 italic">"The motion graphics package provided for our product launch exceeded every expectation. Sharp, modern, and perfectly timed."</p>
+<div>
+<p class="font-label-caps text-label-caps uppercase font-bold">Sarah Jenkins</p>
+<p class="text-label-caps text-on-surface-variant">CMO, TechNova Systems</p>
+</div>
+</div>
+<div class="p-10 border border-outline-variant bg-background">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">format_quote</span>
+<p class="body-lg mb-10 italic">"Rare to find a studio that understands both the creative soul of a project and the technical rigors of high-end delivery."</p>
+<div>
+<p class="font-label-caps text-label-caps uppercase font-bold">Elena Rodriguez</p>
+<p class="text-label-caps text-on-surface-variant">Creative Lead, Flux Media</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Banner -->
+<section class="relative py-section-gap overflow-hidden">
+<div class="absolute inset-0 bg-primary opacity-5"></div>
+<div class="px-margin-desktop relative z-10 flex flex-col md:flex-row items-center justify-between gap-10">
+<div class="max-w-2xl">
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg mb-4">Ready to turn ideas into visuals?</h2>
+<p class="text-body-lg text-on-surface-variant">Let's discuss your next production requirements and build something extraordinary together.</p>
+</div>
+<button class="bg-primary text-on-primary-fixed-variant px-12 py-6 font-label-caps text-label-caps uppercase hover:scale-105 transition-all">Book a Call</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background border-t border-surface-variant py-section-gap">
+<div class="max-w-7xl mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Brand Column -->
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-extrabold text-on-surface mb-6">STUDIO_POST</div>
+<p class="text-on-surface-variant font-body-md text-body-md">Precision cinematic engineering for modern digital canvases. From film to interactive 3D.</p>
+</div>
+<!-- Services Links -->
+<div>
+<h5 class="font-label-caps text-label-caps uppercase mb-8 tracking-widest text-primary">Capabilities</h5>
+<ul class="space-y-4 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">VFX</a></li>
+<li><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Color Grading</a></li>
+<li><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Sound Design</a></li>
+<li><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Editorial</a></li>
+</ul>
+</div>
+<!-- Studio Links -->
+<div>
+<h5 class="font-label-caps text-label-caps uppercase mb-8 tracking-widest text-primary">Studio</h5>
+<ul class="space-y-4 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Our Ethos</a></li>
+<li><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">The Lab</a></li>
+<li><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Careers</a></li>
+<li><a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<!-- Social/Contact -->
+<div>
+<h5 class="font-label-caps text-label-caps uppercase mb-8 tracking-widest text-primary">Connect</h5>
+<div class="flex gap-4 mb-10">
+<a class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:border-primary text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:border-primary text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">movie</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:border-primary text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+</div>
+<p class="text-label-caps text-on-surface-variant font-label-caps">© 2024 STUDIO_POST. ALL RIGHTS RESERVED.</p>
+</div>
+</div>
+</footer>
+</body></html>
